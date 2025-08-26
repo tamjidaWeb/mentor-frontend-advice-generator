@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advice Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="mx-auto  ">
-    <section class="border-white min-h-screen flex items-center justify-center bg-[#0F172A] ">
-        <div class=" text-white bg-[#1E293B] p-10 rounded-2xl">
-           <div class="text-center text-[#3CEAA1]">
-             <h1 class="text-center uppercase font-semibold tracking-[3px] text-sm">Advice # <span id="advice-id-number"></span></h1>
-            <p>"<span id="advice"></span> "</p>
-           </div>
-            <div class="relative pb-4">
-                <img src="advice-generator-app-main/images/pattern-divider-desktop.svg" alt="">
-                 <div class="flex items-center justify-center absolute top-10 left-48">
-                   <div id="advice-btn" class="rounded-full bg-[#3CEAA1] text-center w-16 h-16 flex items-center justify-center 
-                         shadow-[0_0_20px_5px_rgba(60,234,161,0.7)] cursor-pointer">
-                        <img class="w-6 h-6 object-contain" src="advice-generator-app-main/images/icon-dice.svg" alt="">
-                    </div>
-                 </div>
-               
-            </div>  
-        </div>
-       
-    </section>
+<body class="bg-[#0F172A] flex items-center justify-center min-h-screen">
+  <section class="bg-[#1E293B] text-white p-8 rounded-2xl w-[90%] max-w-md shadow-lg flex flex-col items-center">
+    
+    <!-- Advice text -->
+    <div class="text-center text-[#3CEAA1] space-y-4 min-h-[100px]">
+      <h1 class="uppercase font-semibold tracking-[3px] text-sm">
+        Advice # <span id="advice-id-number"></span>
+      </h1>
+      <p class="text-lg px-4 leading-relaxed">
+        <span id="advice"></span>
+      </p>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Divider -->
+    <div class="relative w-full my-6">
+      <img src="advice-generator-app-main/images/pattern-divider-desktop.svg" alt="divider" class="mx-auto">
+      
+      <!-- Dice button -->
+      <div class="absolute inset-x-0 -bottom-8 flex justify-center">
+        <button id="advice-btn" 
+          class="rounded-full bg-[#3CEAA1] w-16 h-16 flex items-center justify-center 
+                 shadow-[0_0_20px_5px_rgba(60,234,161,0.7)] cursor-pointer hover:scale-110 transition">
+          <img class="w-6 h-6 object-contain" src="advice-generator-app-main/images/icon-dice.svg" alt="dice">
+        </button>
+      </div>
+    </div>
+
+  </section>
+  
+  <script src="script.js"></script>
 </body>
 </html>
